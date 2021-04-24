@@ -1,0 +1,342 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg,  hsl(214, 47%, 23%), hsl(237, 49%, 15%)); 
+    font-family: sans-serif;
+}
+#bodywrap{
+    width: 100%;
+    padding-top: 20px;
+}
+#rules{
+    position: fixed;
+    display: none;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: hsl(0, 0%, 100%);
+    z-index: 100;
+}
+#rules h1{
+    font-weight: 700;
+    color: hsl(229, 25%, 31%);
+}
+#rules img{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+#displayboard{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 3px solid hsl(217, 16%, 45%);
+}
+#scoreboard{
+    background: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 7px;
+}
+#scoreboard span{
+    font-size: 15px;
+    font-weight: 700;
+    color:hsl(217, 16%, 45%);
+}
+#scoreboard div{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color:hsl(229, 25%, 31%);
+}
+#gamecontainer{
+    position: relative;
+    height: 450px;
+    width: 250px;
+    margin: auto;
+    background-image: url("../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position-y: center;
+    background-position-x: center;
+    padding-bottom: 20px;
+    display: block;
+}
+.innerlayer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: hsl(0, 0%, 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px -5px lightgrey;
+}
+img{
+    width: 80%;
+}
+.outer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 110px;
+   height: 110px;
+   border-radius: 50%;
+}
+#rockouterp{
+    top: 50%;
+    left: 25%;
+    background: linear-gradient(180deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    box-shadow: inset 0px -5px hsl(348, 29%, 41%);
+}
+#rockouterc{
+    background: linear-gradient(180deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    box-shadow: inset 0px -5px hsl(348, 29%, 41%);
+}
+#paperouterp{
+    top: 22%;
+    left: -2%;
+    background: linear-gradient(90deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    box-shadow: inset 0px -5px hsl(231, 27%, 45%);
+}
+#paperouterc{
+    background: linear-gradient(90deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    box-shadow: inset 0px -5px hsl(231, 27%, 45%);
+}
+#scissorsouterp{
+    top: 22%;
+    left: 52%;
+    background: linear-gradient(90deg, hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+    box-shadow: inset 0px -5px hsl(39, 34%, 45%);
+}
+#scissorsouterc{
+    background: linear-gradient(90deg, hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+    box-shadow: inset 0px -5px hsl(39, 34%, 45%);
+}
+#showrules{
+    width: 100px;
+    text-transform: uppercase;
+    color: hsl(217, 16%, 45%);
+    font-weight: 700;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid hsl(217, 26%, 63%);
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+
+
+/*second game screen*/
+#selectionscreen{
+    display: block;
+    flex-direction: column;
+    height: 450px;
+    width: 250px;
+    margin: auto;
+    align-items: center;
+}
+#pickdiv{
+    margin-top: 30px;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: none;
+}
+.pick{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    text-align: center;
+    align-items: center;
+}
+.pick span{
+    font-size: 11px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+.pickcont{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    background-color: hsl(237, 49%, 15%);
+}
+.pickcont .outer{
+    position: relative;
+}
+.pickcont #rockouterc, .pickcont #rockouterp{
+    top: -10px;
+    left: -10px;
+}
+.pickcont #paperouterc, .pickcont #paperouterp{
+    top: -10px;
+    left: -10px;
+}
+.pickcont #scissorsouterc, .pickcont #scissorsouterp{
+    top: -10px;
+    left: -10px;
+}
+#gameresult{
+    width: 200px;
+    text-align: center;
+    display: none;
+    margin: auto;
+}
+.winloose{
+    width: 100%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 700;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+}
+#youwin{
+    text-align: center;
+}
+#youloose{
+    text-align: center;
+    display: none;
+}
+#playagainbtn{
+    width: 100%;
+    background: hsl(0, 0%, 100%);
+    text-align: center;
+    font-weight: 600;
+    padding:10px 0;
+    border-radius: 7px;
+}
+@media(min-width: 769px){
+    #rules{
+        position: fixed;
+        top: 10vw;
+        left: 40vw;
+        display: none;
+        flex-direction: column;
+        justify-content: left;
+        width: 250px;
+        height: 250px;
+        padding: 10px;
+        background: hsl(0, 0%, 100%);
+        border-radius: 5px;
+        z-index: 100;
+        margin: auto;
+    }
+    #rules img{
+        width: 80%;
+    }
+    #rules h1{
+        position: relative;
+        font-size: 20px;
+        left: -30%;
+        display: flex;
+    }
+    #closerules{
+        position: absolute;
+        right: 10px;
+        top: 7%;
+    }
+    #displayboard{
+        width: 50%;
+        padding: 10px;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        border-radius: 5px;
+        border: 3px solid hsl(217, 16%, 45%);
+    }
+    #gamecontainer{
+        position: relative;
+        height: 370px;
+        width: 400px;
+        margin: auto;
+        background-image: url("../images/bg-triangle.svg");
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position-y: center;
+        background-position-x: center;
+        padding-bottom: 20px;
+        display: block;
+    }
+    .innerlayer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background: hsl(0, 0%, 100%);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        box-shadow: 0px -5px lightgrey;
+    }
+    .outer{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       width: 130px;
+       height: 130px;
+       border-radius: 50%;
+    }
+    #rockouterp{
+        top: 60%;
+        left: 35%;
+        background: linear-gradient(180deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        box-shadow: inset 0px -5px hsl(348, 29%, 41%);
+    }
+    #paperouterp{
+        top: 5%;
+        left: 5%;
+        background: linear-gradient(90deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        box-shadow: inset 0px -5px hsl(231, 27%, 45%);
+    }
+    #scissorsouterp{
+        top: 5%;
+        left: 65%;
+        background: linear-gradient(90deg, hsl(39, 89%, 49%),hsl(40, 84%, 53%));
+        box-shadow: inset 0px -5px hsl(39, 34%, 45%);
+    }
+    #showrules{
+        position: absolute;
+        width: 70px;
+        text-transform: uppercase;
+        color: hsl(217, 16%, 45%);
+        font-weight: 700;
+        right: 10px;
+        padding: 5px;
+        text-align: center;
+        border: 2px solid hsl(217, 26%, 63%);
+        border-radius: 7px;
+        margin-bottom: 1px;
+    }
+    #selectionscreen{
+        position: relative;
+        display: block;
+        flex-direction: column;
+        height: 350px;
+        width: 650px;
+        margin: auto;
+        align-items: center;
+    }
+    #gameresult{
+        position: absolute;
+        width: 150px;
+        left: 40%;
+        top: 15%;
+        text-align: center;
+        display: none;
+        margin: auto;
+    }
+  
+}
